@@ -428,12 +428,8 @@ class DialogueBox extends FlxSpriteGroup
 				shad.waveSpeed = 1;
 				shad.shader.uTime.value[0] = new flixel.math.FlxRandom().float(-100000,100000);
 				shad.shader.uampmul.value[0] = 1;*/
-				PlayState.screenshader.Enabled = true;
-			case 'undistort':
-				PlayState.screenshader.Enabled = false;
 			case 'distortbg':
 				var shad:Shaders.DistortBGEffect = new Shaders.DistortBGEffect();
-				curshader = shad;
 				shad.waveAmplitude = 0.1;
 				shad.waveFrequency = 5;
 				shad.waveSpeed = 2;
