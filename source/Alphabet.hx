@@ -311,9 +311,6 @@ class AlphaCharacter extends FlxSprite
 		animation.addByPrefix(letter, letter, 24);
 		animation.play(letter);
 		if (invert)
-		{
-		this.shader = new InvertShader();
-		}
 
 		updateHitbox();
 	}
