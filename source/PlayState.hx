@@ -1882,19 +1882,19 @@ class PlayState extends MusicBeatState
 					openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition()
 						.y, formoverride == "bf" || formoverride == "none" ? SONG.player1 : formoverride));
 
-						#if desktop
-						DiscordClient.changePresence("GAME OVER -- "
-						+ SONG.song
-						+ " ("
-						+ storyDifficultyText
-						+ ") ",
-						"\nAcc: "
-						+ truncateFloat(accuracy, 2)
-						+ "% | Score: "
-						+ songScore
-						+ " | Misses: "
-						+ misses, iconRPC);
-						#end
+							#if desktop
+							DiscordClient.changePresence("OVER -- "
+							+ SONG.song
+							+ " ("
+							+ storyDifficultyText
+							+ ") ",
+							"\nCool shit: "
+							+ truncateFloat(accuracy, 2)
+							+ "% | the score for the song: "
+							+ songScore
+							+ " | LOL YOU MISSED DUMBASS: "
+							+ misses, iconRPC);
+							#end
 				}
 			}
 			else
@@ -1926,16 +1926,16 @@ class PlayState extends MusicBeatState
 							.y, formoverride == "bf" || formoverride == "none" ? SONG.player1 : formoverride));
 
 							#if desktop
-							DiscordClient.changePresence("GAME OVER -- "
+							DiscordClient.changePresence("OVER -- "
 							+ SONG.song
 							+ " ("
 							+ storyDifficultyText
 							+ ") ",
-							"\nAcc: "
+							"\nCool shit: "
 							+ truncateFloat(accuracy, 2)
-							+ "% | Score: "
+							+ "% | the score for the song: "
 							+ songScore
-							+ " | Misses: "
+							+ " | LOL YOU MISSED DUMBASS: "
 							+ misses, iconRPC);
 							#end
 					}
@@ -1979,7 +1979,7 @@ class PlayState extends MusicBeatState
 						camZooming = true;
 
 					var altAnim:String = "";
-					var healthtolower:Float = 0.02;
+					var healthtolower:Float = 0.01;
 
 					if (SONG.notes[Math.floor(curStep / 16)] != null)
 					{
